@@ -1,0 +1,130 @@
+.contacts {
+  
+  //.contacts__wrapper 
+  &__wrapper {
+    width: 100%;
+    
+    @include viewport-tablet-min {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include viewport-phone {
+      max-width: px-to-rem(460);
+    }
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-left: px-to-rem(60);
+      }
+      @include viewport-phone {
+        margin-top: px-to-rem(36);
+      }
+    }
+  }
+  
+  //.contacts__info 
+  &__info {
+    width: 100%;
+
+    @include viewport-desktop {
+      max-width: px-to-rem(480);
+    }
+
+    @include viewport-tablet {
+      max-width: px-to-rem(370);
+    }
+
+    > * + * {
+      margin-top: px-to-rem(20);
+    }
+  }
+
+  //.contacts__header 
+  &__header {
+    &.desktop {
+      @include viewport-phone {
+        display: none;
+      }
+    }
+
+    &.mobile {
+      @include viewport-tablet-min {
+        display: none;
+      }
+    }
+  }
+  
+  //.contacts__logo 
+  &__logo {
+    @include viewport-desktop {
+      max-width: px-to-rem(248);
+    }
+
+    @include viewport-tablet {
+      max-width: px-to-rem(220);
+    }
+
+    @include viewport-phone {
+      max-width: px-to-rem(220);
+      margin-top: px-to-rem(32);
+
+      @media (max-width: 650px) {
+        max-width: px-to-rem(156);
+      } 
+    }
+  }
+  
+  //.contacts__link 
+  &__link {
+    @include transition(color 0.4s);
+
+    text-decoration: unset;
+    font-weight: 700;
+    line-height: 170%;
+    font-size: px-to-rem(16);
+
+    color: var(--color-black-100);
+
+    &.location {
+      font-weight: 300;
+    }
+
+    @include hover-focus-visible {
+      @include non-mobile-device {
+        color: var(--color-red-100);
+      }
+    }
+  }
+  
+  //.contacts-list 
+  &-list {
+    > * + * {
+      margin-top: px-to-rem(20);
+    }
+  }
+
+  //.contacts-form__container 
+  &-form__container {
+    width: 100%;
+  
+    @include viewport-desktop {
+      max-width: px-to-rem(600);
+    }
+
+    @include viewport-tablet {
+      max-width: px-to-rem(460);
+    }
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-top: px-to-rem(18);
+      }
+    }
+  }
+  
+  //.contacts-form 
+  &-form {
+    width: 100%;
+  }
+}

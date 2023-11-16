@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Overtech</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="_container header__container">
+        <div class="header__wrapper">
+          <div class="header__item">
+            <ul class="menu__lang">
+              <li>
+                <p class="lang-item lang-item-current">eng</p>
+              </li>
+              <li><a class="lang-item" href="#">PL</a></li>
+            </ul>
+          </div>
+          <div class="header__item">
+            <div class="dropdown desktop"><button class="dropdown__header">Our projects</button>
+              <ul class="dropdown-list">
+                <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                    rel="noreferrer">ONG Solar</a></li>
+                <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                    rel="noreferrer">Caspit Trade</a></li>
+                <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                    rel="noreferrer">Overtech</a></li>
+                <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                    rel="noreferrer">Agronovatsiia</a></li>
+                <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                    rel="noreferrer">EXIM Leasing</a></li>
+                <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                    rel="noreferrer">Discorb</a></li>
+              </ul>
+            </div><button class="header-button popup-open" data-popup="_popup-menu" title="open menu"><span
+                class="header-button__title">menu</span><span class="header-button__burger"><img
+                  src="assets/img/burger.svg" alt="burger" draggable="false"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-menu menu__popup " data-popupname="_popup-menu" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close hidden"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="modal-menu__header"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                    alt="close"></button></div>
+              <div class="modal-menu__main">
+                <nav class="menu">
+                  <ul class="menu-list">
+                    <li class="menu-list__item"><a class="menu__link anchor" href="#" data-goto=".products">Products</a>
+                    </li>
+                    <li class="menu-list__item"><a class="menu__link anchor" href="#"
+                        data-goto=".advantages">Advantages</a></li>
+                    <li class="menu-list__item"><a class="menu__link anchor" href="#" data-goto=".about">About
+                        Overtech</a></li>
+                    <li class="menu-list__item"><a class="menu__link anchor" href="#" data-goto=".contacts">Contact
+                        Us</a></li>
+                  </ul>
+                </nav>
+                <div class="dropdown mobile accordion" data-is-label-click="false">
+                  <div class="accordion__item"><button class="accordion__summary dropdown__header">Our projects<span
+                        class="accordion__label"></span></button>
+                    <div class="accordion__details">
+                      <ul class="dropdown-list accordion__description">
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                            rel="noreferrer">ONG Solar</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                            rel="noreferrer">Caspit Trade</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                            rel="noreferrer">Overtech</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                            rel="noreferrer">Agronovatsiia</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                            rel="noreferrer">EXIM Leasing</a></li>
+                        <li class="dropdown-list__item"><a class="dropdown-list__link" href="#" target="_blank"
+                            rel="noreferrer">Discorb</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback thanks__popup " data-popupname="_popup-thanks" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/success.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Thank you!</p>
+                </div>
+                <p class="popup-feedback__subtitle">Your application has been accepted. <br />Expect a call soon.</p>
+                <button class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback error__popup " data-popupname="_popup-error" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__header">
+                  <div class="popup-feedback__label"><img src="assets/img/error.svg" alt="success"></div>
+                  <p class="popup-feedback__title">Oops</p>
+                </div>
+                <p class="popup-feedback__subtitle">Something wrong. Try later.</p><button
+                  class="popup-feedback__button popup__button button-filled"><span>Home</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="_container banner__container">
+        <div class="banner__wrapper">
+          <div class="banner-content background-full-height__container">
+            <div class="banner-content__background background-full-height" aria-hidden="true"><img
+                src="assets/img/background-full-height.png" alt="bg"></div>
+            <h1 class="banner__title">OVERTECH</h1>
+            <h2 class="banner__subtitle">Growth is up to you</h2><a class="banner__button button-filled anchor" href="#"
+              data-goto=".about"><span>About</span></a>
+          </div>
+          <div class="banner-media">
+            <div class="banner-media__container"><img src="assets/img/banner-media.jpg" alt="banner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="products light">
+      <div class="_container">
+        <div class="products__wrapper">
+          <div class="section-header products__header">
+            <div class="section-header__label"><svg width="11" height="5" viewBox="0 0 11 5" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z"
+                  fill="currentColor" />
+              </svg></div>
+            <h2 class="section-header__title">Products</h2>
+          </div>
+          <div class="products__main">
+            <div class="products-slider-controls"><button class="products-slider-prev"><svg width="48" height="48"
+                  viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30 36L18 24L30 12" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round" />
+                </svg></button><button class="products-slider-next"><svg width="48" height="48" viewBox="0 0 48 48"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 36L30 24L18 12" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                    stroke-linejoin="round" />
+                </svg></button></div>
+            <div class="products-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="products-slider__item">
+                    <div class="products-slider__image">
+                      <div class="products-slider__image__container"><img src="assets/img/products/product-1.jpg"
+                          alt="Nitrogen fertilizers" loading="lazy"></div>
+                    </div>
+                    <div class="products-slider__content">
+                      <h3 class="products-slider__title">Nitrogen fertilizers</h3>
+                      <p class="products-slider__description">Anhydrous ammonia, Urea, UAN, Ammonum nitrate, Ammonium
+                        sulphate</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="products-slider__item">
+                    <div class="products-slider__image">
+                      <div class="products-slider__image__container"><img src="assets/img/products/product-2.jpg"
+                          alt="Phosphorus fertlizers" loading="lazy"></div>
+                    </div>
+                    <div class="products-slider__content">
+                      <h3 class="products-slider__title">Phosphorus fertlizers</h3>
+                      <p class="products-slider__description">(Monoammonium phosphate (MAP), Diammonium phosphate (DAP),
+                        Triple superphosphate (TSP), Liqud complex fertilizers)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="products-slider__item">
+                    <div class="products-slider__image">
+                      <div class="products-slider__image__container"><img src="assets/img/products/product-3.jpg"
+                          alt="Potassium fertilizers" loading="lazy"></div>
+                    </div>
+                    <div class="products-slider__content">
+                      <h3 class="products-slider__title">Potassium fertilizers</h3>
+                      <p class="products-slider__description">(Potassium Chloride (KCl)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="products-slider__item">
+                    <div class="products-slider__image">
+                      <div class="products-slider__image__container"><img src="assets/img/products/product-4.jpg"
+                          alt="NPK fertilizers" loading="lazy"></div>
+                    </div>
+                    <div class="products-slider__content">
+                      <h3 class="products-slider__title">NPK fertilizers</h3>
+                      <p class="products-slider__description">(different formulations of complex fertilizers)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="products-slider__item">
+                    <div class="products-slider__image">
+                      <div class="products-slider__image__container"><img src="assets/img/products/product-5.jpg"
+                          alt="Organic fertilizers" loading="lazy"></div>
+                    </div>
+                    <div class="products-slider__content">
+                      <h3 class="products-slider__title">Organic fertilizers</h3>
+                      <p class="products-slider__description">(Leonardite, peat moss, Sapropel)</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="products-slider__item">
+                    <div class="products-slider__image">
+                      <div class="products-slider__image__container"><img src="assets/img/products/product-6.jpg"
+                          alt="Grain" loading="lazy"></div>
+                    </div>
+                    <div class="products-slider__content">
+                      <h3 class="products-slider__title">Grain</h3>
+                      <p class="products-slider__description">Cereals, Barley, Corn, Sunflower seed, Soya</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="products-slider-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages grey">
+      <div class="_container">
+        <div class="advantages__wrapper">
+          <div class="section-header advantages__header">
+            <div class="section-header__label"><svg width="11" height="5" viewBox="0 0 11 5" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z"
+                  fill="currentColor" />
+              </svg></div>
+            <h2 class="section-header__title">Advantages</h2>
+          </div>
+          <div class="advantages__main">
+            <div class="advantages__media"><img src="assets/img/advantages-media.jpg" alt="advantages" loading="lazy">
+            </div>
+            <div class="advantages__content background-full-height__container">
+              <div class="advantage__content__background background-full-height" aria-hidden="true"><img
+                  src="assets/img/background-full-height.png" alt="bg"></div>
+              <ul class="advantages-list">
+                <li class="advantages-list__item">
+                  <div class="advantages-list__count">01</div>
+                  <p class="advantages-list__description">
+                    Strong partnerships with global manufacturers and buyers;
+                  </p>
+                </li>
+                <li class="advantages-list__item">
+                  <div class="advantages-list__count">02</div>
+                  <p class="advantages-list__description">
+                    Efficient global logistics with optimal routing and economies of scale;
+                  </p>
+                </li>
+                <li class="advantages-list__item">
+                  <div class="advantages-list__count">03</div>
+                  <p class="advantages-list__description">
+                    Great opportunities of using warehouses in all ports of the world;
+                  </p>
+                </li>
+                <li class="advantages-list__item">
+                  <div class="advantages-list__count">04</div>
+                  <p class="advantages-list__description">
+                    The opportunity of developing individual fertilizer formulas by a customer’s order;
+                  </p>
+                </li>
+                <li class="advantages-list__item">
+                  <div class="advantages-list__count">05</div>
+                  <p class="advantages-list__description">
+                    The large branched international network of offices
+                  </p>
+                </li>
+                <li class="advantages-list__item">
+                  <div class="advantages-list__count">06</div>
+                  <p class="advantages-list__description">
+                    A team of consummate professional mangers
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about light">
+      <div class="_container">
+        <div class="about__wrapper">
+          <div class="section-header about__header">
+            <div class="section-header__label"><svg width="11" height="5" viewBox="0 0 11 5" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z"
+                  fill="currentColor" />
+              </svg></div>
+            <h2 class="section-header__title">About OVERTECH</h2>
+          </div>
+          <div class="about__typography reverse typography">
+            <p>
+              OVERTECH was established in 2022. Its main type of activity is mineral fertilizer sales. The specialists
+              of the company have the required experience and knowledge in this area.
+            </p>
+            <p>
+              OVERTECH has direct contacts with global manufacturers of mineral fertilizers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services dark">
+      <div class="_container">
+        <div class="services__wrapper">
+          <div class="services-item">
+            <div class="services-item-background">
+              <div class="services-item-background__container"><img src="assets/img/services/service-1.jpg"
+                  alt="Warehouse" loading="lazy"></div>
+            </div>
+            <div class="services-item__content">
+              <h3 class="services-item__title">Warehouse</h3>
+              <div class="services-item__typography reverse typography">
+                <p>
+                  OVERTECH uses warehouse facilities in ports around the world providing direct access to the end
+                  consumer to the goods. It allows to take specific customer needs into account, objectively evaluate
+                  and orient better to the local market to implement a more balanced trading strategy.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="services-item">
+            <div class="services-item-background">
+              <div class="services-item-background__container"><img src="assets/img/services/service-2.jpg"
+                  alt="Logistics, chartering of vessels and containers" loading="lazy"></div>
+            </div>
+            <div class="services-item__content">
+              <h3 class="services-item__title">Logistics, chartering of vessels and containers</h3>
+              <div class="services-item__typography reverse typography">
+                <p>
+                  To meet the logistic needs of customers, OVERTECH freights and uses different types of vessels
+                  worldwide.In addition to our own freight branches, we use the services of international freight
+                  agencies and ship brokers guaranteeing competitive rates for the company and customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section contacts light">
+      <div class="_container">
+        <div class="contacts__wrapper">
+          <div class="contacts__info">
+            <div class="section-header contacts__header mobile">
+              <div class="section-header__label"><svg width="11" height="5" viewBox="0 0 11 5" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z"
+                    fill="currentColor" />
+                </svg></div>
+              <h2 class="section-header__title">Contact Us</h2>
+            </div>
+            <div class="custom-logo-link contacts__logo"><img class="custom-logo" src="assets/img/logo.svg" alt="logo"
+                draggable="false"></div>
+            <ul class="contacts-list">
+              <li><a class="contacts__link location" href="https://maps.app.goo.gl/6nHexzUNuYJZoDQ48" target="_blank"
+                  rel="noreferrer">PÓŁWIEJSKA 17/26, 61-888 POZNAŃ Numer KRS0000966708NIP PL7831855417REGON521771122</a>
+              </li>
+              <li><a class="contacts__link" href="mailto:info@overtech.com.pl">info@overtech.com.pl</a></li>
+              <li><a class="contacts__link" href="tel:+48790364808">+48 790 364 808</a></li>
+            </ul>
+          </div>
+          <div class="contacts-form__container">
+            <div class="section-header contacts__header desktop">
+              <div class="section-header__label"><svg width="11" height="5" viewBox="0 0 11 5" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z"
+                    fill="currentColor" />
+                </svg></div>
+              <h2 class="section-header__title">Contact Us</h2>
+            </div>
+            <form class="contacts-form form" action="post">
+              <div><label for="name"> <strong>Name</strong><input id="name" type="text" name="name"
+                    placeholder="Your name"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+              <div><label for="email"> <strong>Email</strong><input id="email" type="email" name="email"
+                    placeholder="Your email"><span class="wpcf7-not-valid-tip">Wrong format</span></label></div>
+              <div><label for="telephone"> <strong>Phone number</strong><input id="telephone" type="tel"
+                    name="telephone" placeholder="Your phone number"><span class="wpcf7-not-valid-tip">Wrong
+                    format</span></label></div>
+              <div><label for="request"> <strong>Your request</strong><textarea id="request" name="request"
+                    placeholder="Message text"></textarea><span class="wpcf7-not-valid-tip">Wrong format</span></label>
+              </div><button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="_container">
+        <div class="footer__wrapper">
+          <div class="footer__bottom">
+            <div class="footer__bottom__item"><a class="custom-logo-link footer__logo" href="#"> <img
+                  class="custom-logo" src="assets/img/logo.svg" alt="logo" draggable="false"></a>
+              <p class="footer__group">Caspit group of companies<a href="https://caspit.group" target="_blank"
+                  rel="noreferrer">https://caspit.group</a></p>
+              <p class="footer__copyright">Copyright © 2023 Overtech</p>
+            </div>
+            <div class="footer__bottom__item"><a class="develop" href="https://impulse-design.com.ua/" target="_blank"
+                rel="noreferrer"><span class="develop__text">Developed By</span><span class="develop__img"><img
+                    src="assets/img/impulse.svg" alt="impulse"></span></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="runtime.bundle.js"> </script>
+    <script src="vendor.js"> </script>
+    <script src="607.bundle.js"> </script>
+    <script src="index.1.bundle.js"> </script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+@import '../base';
+
+.footer { 
+  overflow: hidden;
+  padding: px-to-rem(40) 0;
+
+  color: var(--color-black-100);
+  background-color: var(--color-grey);
+
+  // @include viewport-desktop {
+  // }
+
+  // @include viewport-tablet {
+  //   padding-top: px-to-rem(60);
+  //   padding-bottom: px-to-rem(58);
+  // }
+
+  // @include viewport-phone {
+  //   padding-top: px-to-rem(40);
+  //   padding-bottom: px-to-rem(40);
+  // }
+  
+  
+  //.footer__wrapper 
+  &__wrapper {
+    width: 100%;
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-top: px-to-rem(60);
+      }
+      @include viewport-phone {
+        margin-top: px-to-rem(50);
+      }
+    }
+  }
+
+  //.footer__main 
+  &__main {
+    display: flex;
+    width: 100%;
+
+    @include viewport-tablet-min {
+      max-width: px-to-rem(1024);
+      margin-left: auto;
+      margin-right: 0;
+      justify-content: space-between;
+    }
+
+    @include viewport-phone {
+      flex-direction: column;
+    }
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-left: px-to-rem(40);
+      }
+      @include viewport-phone {
+        margin-top: px-to-rem(36);
+      }
+    }
+  }
+
+  //.footer__bottom 
+  &__bottom {
+    width: 100%;
+
+    @include viewport-tablet-min {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-left: px-to-rem(24);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(24);
+      }
+    }
+
+    //.footer__bottom__item 
+    &__item {
+      > * + * {
+        margin-top: px-to-rem(24);
+      }
+    }
+  }
+  
+  //.footer__item 
+  &__item {
+    width: 100%;
+
+    &.desktop {
+      @include viewport-phone {
+        display: none;
+      }
+    }
+    
+    @include viewport-tablet-min {
+      max-width: px-to-rem(218);
+    }
+    
+    @include viewport-phone {
+      max-width: px-to-rem(300);
+    }
+
+    &:nth-child(1) {
+      @include viewport-tablet-min {
+        max-width: px-to-rem(186);
+      }
+    }
+
+    // &:nth-child(3) {
+    //   @include viewport-phone {
+    //     margin-top: px-to-rem(16);
+    //   }
+    // }
+
+    > * + * {
+      margin-top: px-to-rem(16);
+    }
+  }
+  
+  //.footer__logo 
+  &__logo {
+    @include viewport-tablet-min {
+      max-width: px-to-rem(186);
+    }
+  }
+  
+  //.footer-contacts 
+  &-contacts {
+    li {
+      &.mobile {
+        @include viewport-tablet-min {
+          display: none;
+        }
+
+        + * {
+          @include viewport-tablet-min {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    
+    //.footer-contacts__link 
+    &__link {
+      width: 100%;
+
+      &.location {
+        align-items: flex-start;
+      }
+    }
+
+    > * + * {
+      margin-top: px-to-rem(16);
+
+    }
+  }
+
+  //.footer__copyright 
+  &__copyright {
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 170%;
+    font-size: px-to-rem(16);
+  }
+
+  //.footer__group 
+  &__group {
+    font-weight: 300;
+    line-height: 170%;
+    font-size: px-to-rem(16);
+    
+    a {
+      display: inline-block;
+      margin-left: 0.25em;
+
+      @include transition(color 0.3s);
+      text-decoration: unset;  
+      color: inherit;
+
+      @include hover-focus-visible {
+        @include non-mobile-device {
+          color: var(--color-red);
+        }
+      }
+    }
+  }
+}
+
+.develop {
+  display: flex;
+  align-items: center;
+
+  text-decoration: unset;
+  font-weight: 500;
+  line-height: 110%;
+  font-size: px-to-rem(14);
+  color: var(--color-black-100);
+
+  > * + * {
+    margin-left: px-to-rem(6);
+  }
+
+  //.develop__text 
+  &__text {
+    @include transition(color 0.4s);
+    color: inherit;
+
+    @at-root .develop:hover & {
+      @include non-mobile-device {
+        color: var(--color-red);
+      }
+    }
+    @at-root .develop:focus-visible & {
+      @include non-mobile-device {
+        color: var(--color-red);
+      }
+    }
+  }
+  
+  //.develop__img 
+  &__img {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: px-to-rem(94);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+

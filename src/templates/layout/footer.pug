@@ -1,0 +1,89 @@
+-
+  const footerContacts = [
+    {
+      isTargetBlank: 'true',
+      image: '@/assets/img/contacts/contacts-1.svg',
+      href: 'https://www.google.com/maps/place/ул.+Казацкая,+120%2F4,+Киев,+02000/@50.396979,30.4921365,18z/data=!4m9!1m2!2m1!1zMDMwMjIsINC80ZbRgdGC0L4g0JrQuNGX0LIsICDQstGD0LsuINCa0L7Qt9Cw0YbRjNC60LAsIDEyMC80LCDQutC-0YDQv9GD0YEg0JIsINC60ZbQvNC90LDRgtCwIDE1!3m5!1s0x40d4c8d034b088bb:0x7935e7458342673a!8m2!3d50.396979!4d30.4921365!16s%2Fg%2F1tczcdtc?authuser=0',
+      title: '03022, місто Київ, вул. Козацька, 120/4, корпус В, кімната 15'
+    },
+    {
+      isTargetBlank: 'false',
+      image: '@/assets/img/contacts/contacts-2.svg',
+      href: 'tel:+380662105690',
+      title: '+38 066 210-56-90'
+    },
+    {
+      isTargetBlank: 'false',
+      image: '@/assets/img/contacts/contacts-3.svg',
+      href: 'mailto:info@discorb.com.ua',
+      title: 'info@discorb.com.ua'
+    },
+  ];
+
+footer.footer(class=`${isFooterNearSeo ? 'near-seo__below' : ''}`)
+  ._container
+    .footer__wrapper
+      //- .footer__main
+      //-   .footer__item
+      //-     a.custom-logo-link.footer__logo(href='#') 
+      //-       img.custom-logo(
+      //-         src=require('@/assets/img/logo.svg'),
+      //-         alt='logo',
+      //-         draggable='false'
+            )
+
+        //- .footer__item.desktop
+        //-   a.footer-contacts__link.contact-link.location(
+        //-     href=`${footerContacts[0].href}`,
+        //-     target=`${footerContacts[0].isTargetBlank === 'true' ? '_blank' : '_self'}`
+        //-   )
+        //-     span.contact-link__label
+        //-       img(
+        //-         src=require(`${footerContacts[0].image}`),
+        //-         alt=`contact-${1}`
+        //-       )
+
+        //-     span.contact-link__text= footerContacts[0].title
+
+        //- .footer__item
+        //-   ul.footer-contacts
+        //-     each item, index in footerContacts
+        //-       li(class=`${index === 0 ? 'mobile' : ''}`)
+        //-         a.footer-contacts__link.contact-link(
+        //-           class=`${index === 0 ? 'mobile' : ''}`,
+        //-           href=`${item.href}`,
+        //-           target=`${item.isTargetBlank === 'true' ? '_blank' : '_self'}`
+        //-         )
+        //-           span.contact-link__label
+        //-             img(
+        //-               src=require(`${item.image}`),
+        //-               alt=`contact-${index + 1}`
+        //-             )
+
+        //-           span.contact-link__text= item.title
+
+      .footer__bottom
+        .footer__bottom__item
+          a.custom-logo-link.footer__logo(href='#') 
+            img.custom-logo(
+              src=require('@/assets/img/logo.svg'),
+              alt='logo',
+              draggable='false'
+            )
+
+          p.footer__group Caspit group of companies
+            |
+            a(href='https://caspit.group', target='_blank', rel='noreferrer') https://caspit.group
+
+          p.footer__copyright Copyright © 2023 Overtech
+
+        .footer__bottom__item
+          a.develop(
+            href='https://impulse-design.com.ua/',
+            target='_blank',
+            rel='noreferrer'
+          )
+            span.develop__text Developed By
+
+            span.develop__img
+              img(src=require('@/assets/img/impulse.svg'), alt='impulse')

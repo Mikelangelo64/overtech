@@ -1,0 +1,54 @@
+-
+  const menuPopupList = [
+    {
+      name: 'Products',
+      href: '#',
+      goto: '.products',
+    },
+    {
+      name: 'Advantages',
+      href: '#',
+      goto: '.advantages',
+    },
+    {
+      name: 'About Overtech',
+      href: '#',
+      goto: '.about',
+    },
+    {
+      name: 'Contact Us',
+      href: '#',
+      goto: '.contacts',
+    },
+  ];
+
+.modal-menu__header
+  button.popup__close
+    img(src=require('@/assets/img/popup-close.svg'), alt='close')
+
+.modal-menu__main
+  nav.menu
+    ul.menu-list
+      each item in menuPopupList
+        li.menu-list__item
+          a.menu__link(
+            class=`${item.goto !== 'false' ? 'anchor' : ''}`,
+            href=`${item.href}`,
+            data-goto=`${item.goto}`
+          ) #{ item.name }
+
+  .dropdown.mobile.accordion(data-is-label-click='false')
+    .accordion__item
+      button.accordion__summary.dropdown__header Our projects
+        |
+        span.accordion__label
+
+      .accordion__details
+        ul.dropdown-list.accordion__description
+          each item in dropdownList
+            li.dropdown-list__item
+              a.dropdown-list__link(
+                href=`${item.href}`,
+                target='_blank',
+                rel='noreferrer'
+              )= item.name

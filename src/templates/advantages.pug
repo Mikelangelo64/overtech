@@ -1,0 +1,56 @@
+-
+  const advantagesList = [
+    `
+      Strong partnerships with global manufacturers and buyers;
+    `,
+    `
+      Efficient global logistics with optimal routing and economies of scale;
+    `,
+    `
+      Great opportunities of using warehouses in all ports of the world;
+    `,
+    `
+      The opportunity of developing individual fertilizer formulas by a customer’s order;
+    `,
+    `
+      The large branched international network of offices
+    `,
+    `
+      A team of consummate professional mangers
+    `,
+  ];
+
+section.advantages.grey
+  ._container
+    .advantages__wrapper
+      .section-header.advantages__header
+        .section-header__label
+          <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z" fill="currentColor"/>
+          </svg>
+
+        h2.section-header__title Advantages
+
+      .advantages__main
+        .advantages__media
+          img(
+            src=require('@/assets/img/advantages-media.jpg'),
+            alt='advantages',
+            loading='lazy'
+          )
+
+        .advantages__content.background-full-height__container
+          .advantage__content__background.background-full-height(
+            aria-hidden='true'
+          )
+            img(
+              src=require('@/assets/img/background-full-height.png'),
+              alt='bg'
+            )
+
+          ul.advantages-list
+            each item, index in advantagesList
+              li.advantages-list__item
+                .advantages-list__count= `${index + 1 < 10 ? '0' : ''}${index + 1}`
+
+                p.advantages-list__description!= item

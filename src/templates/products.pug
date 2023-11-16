@@ -1,0 +1,76 @@
+-
+  const productsList = [
+    {
+      image: '@/assets/img/products/product-1.jpg',
+      title: 'Nitrogen fertilizers',
+      description: 'Anhydrous ammonia, Urea, UAN, Ammonum nitrate, Ammonium sulphate',
+    },
+    {
+      image: '@/assets/img/products/product-2.jpg',
+      title: 'Phosphorus fertlizers',
+      description: '(Monoammonium phosphate (MAP), Diammonium phosphate (DAP), Triple superphosphate (TSP), Liqud complex fertilizers)',
+    },
+    {
+      image: '@/assets/img/products/product-3.jpg',
+      title: 'Potassium fertilizers',
+      description: '(Potassium Chloride (KCl)',
+    },
+    {
+      image: '@/assets/img/products/product-4.jpg',
+      title: 'NPK fertilizers',
+      description: '(different formulations of complex fertilizers)',
+    },
+    {
+      image: '@/assets/img/products/product-5.jpg',
+      title: 'Organic fertilizers',
+      description: '(Leonardite, peat moss, Sapropel)',
+    },
+    {
+      image: '@/assets/img/products/product-6.jpg',
+      title: 'Grain',
+      description: 'Cereals, Barley, Corn, Sunflower seed, Soya',
+    },
+  ];
+
+section.products.light
+  ._container
+    .products__wrapper
+      .section-header.products__header
+        .section-header__label
+          <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z" fill="currentColor"/>
+          </svg>
+
+        h2.section-header__title Products
+
+      .products__main
+        .products-slider-controls
+          button.products-slider-prev
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 36L18 24L30 12" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+
+          button.products-slider-next
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 36L30 24L18 12" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+
+        .products-slider.swiper
+          .swiper-wrapper
+            each item in productsList
+              .swiper-slide
+                .products-slider__item
+                  .products-slider__image
+                    .products-slider__image__container
+                      img(
+                        src=require(`${item.image}`),
+                        alt=`${item.title}`,
+                        loading='lazy'
+                      )
+
+                  .products-slider__content
+                    h3.products-slider__title= item.title
+
+                    p.products-slider__description= item.description
+
+        .products-slider-pagination

@@ -1,0 +1,40 @@
+-
+  const servicesList = [
+    {
+      image: '@/assets/img/services/service-1.jpg',
+      title: 'Warehouse',
+      description: `
+        <p>
+          OVERTECH uses warehouse facilities in ports around the world providing direct access to the end consumer to the goods. It allows to take specific customer needs into account, objectively evaluate and orient better to the local market to implement a more balanced trading strategy.
+        </p>
+      `,
+    },
+
+    {
+      image: '@/assets/img/services/service-2.jpg',
+      title: 'Logistics, chartering of vessels and containers',
+      description: `
+        <p>
+          To meet the logistic needs of customers, OVERTECH freights and uses different types of vessels worldwide.In addition to our own freight branches, we use the services of international freight agencies and ship brokers guaranteeing competitive rates for the company and customers.
+        </p>
+      `,
+    },
+  ];
+
+section.services.dark
+  ._container
+    .services__wrapper
+      each item in servicesList
+        .services-item
+          .services-item-background
+            .services-item-background__container
+              img(
+                src=require(`${item.image}`),
+                alt=`${item.title}`,
+                loading='lazy'
+              )
+
+          .services-item__content
+            h3.services-item__title= item.title
+
+            .services-item__typography.reverse.typography!= item.description

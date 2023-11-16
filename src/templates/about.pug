@@ -1,0 +1,22 @@
+-
+  const aboutTypography = `
+    <p>
+      OVERTECH was established in 2022. Its main type of activity is mineral fertilizer sales. The specialists of the company have the required experience and knowledge in this area.
+    </p>
+    <p>
+      OVERTECH has direct contacts with global manufacturers of mineral fertilizers.
+    </p>
+  `;
+
+section.about.light
+  ._container
+    .about__wrapper
+      .section-header.about__header
+        .section-header__label
+          <svg width="11" height="5" viewBox="0 0 11 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.80408 2.86869L2.32863e-07 5V3.59329C-0.000191635 3.25312 0.11819 2.92303 0.335577 2.65732C0.552771 2.39162 0.856307 2.20612 1.19572 2.13133L11 0V1.40672C10.9998 1.74684 10.8814 2.07684 10.6642 2.34249C10.4468 2.60817 10.1435 2.79371 9.80408 2.86869Z" fill="currentColor"/>
+          </svg>
+
+        h2.section-header__title About OVERTECH
+
+      .about__typography.reverse.typography!= aboutTypography
